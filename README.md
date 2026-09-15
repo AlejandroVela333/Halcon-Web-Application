@@ -30,17 +30,17 @@ The system will include the following roles:
 
 
 
-\* \*\*Administrator:\*\* Registers users and assigns roles.
+\- \*\*Administrator:\*\* Registers users and assigns roles.
 
-\* \*\*Sales:\*\* Registers customer orders.
+\- \*\*Sales:\*\* Registers customer orders.
 
-\* \*\*Purchasing:\*\* Manages the purchase of materials that are not available in stock.
+\- \*\*Purchasing:\*\* Manages the purchase of materials that are not available in stock.
 
-\* \*\*Warehouse:\*\* Checks stock, prepares orders and reports missing or low-stock materials.
+\- \*\*Warehouse:\*\* Checks stock, prepares orders and reports missing or low-stock materials.
 
-\* \*\*Route:\*\* Manages order delivery and uploads photographic evidence.
+\- \*\*Route:\*\* Manages order delivery and uploads photographic evidence.
 
-\* \*\*Customer:\*\* Consults the status of an order using a customer number and invoice number.
+\- \*\*Customer:\*\* Consults the status of an order using a customer number and invoice number.
 
 
 
@@ -70,35 +70,33 @@ An order can have the following statuses:
 
 
 
-\* Customer order tracking using customer number and invoice number.
+\- Customer order tracking using customer number and invoice number.
 
-\* User and role management.
+\- User and role management.
 
-\* Order registration.
+\- Order registration.
 
-\* Order status management.
+\- Order status management.
 
-\* Stock verification.
+\- Stock verification.
 
-\* Management of missing materials.
+\- Management of missing materials.
 
-\* Upload of photographic evidence by Route personnel.
+\- Upload of photographic evidence by Route personnel.
 
-\* Search orders by:
+\- Search orders by:
 
+&#x20; - Invoice number
 
+&#x20; - Customer number
 
-&#x20; \* Invoice number
+&#x20; - Date
 
-&#x20; \* Customer number
+&#x20; - Status
 
-&#x20; \* Date
+\- Logical deletion of orders.
 
-&#x20; \* Status
-
-\* Logical deletion of orders.
-
-\* Display and restoration of logically deleted orders.
+\- Display and restoration of logically deleted orders.
 
 
 
@@ -106,17 +104,17 @@ An order can have the following statuses:
 
 
 
-\* PHP
+\- PHP
 
-\* Laravel
+\- Laravel
 
-\* MySQL
+\- MySQL
 
-\* XAMPP
+\- XAMPP
 
-\* Git
+\- Git
 
-\* GitHub
+\- GitHub
 
 
 
@@ -128,15 +126,15 @@ The project design will include:
 
 
 
-\* BPMN Diagram
+\- BPMN Diagram
 
-\* Class Diagram
+\- Class Diagram
 
-\* Activity Diagram
+\- Activity Diagram
 
-\* Use Case Diagram
+\- Use Case Diagram
 
-\* Entity-Relationship Diagram
+\- Entity-Relationship Diagram
 
 
 
@@ -145,6 +143,4 @@ The project design will include:
 
 
 This repository will contain the source code and documentation developed for the Halcon Web Application project.
-
-
 
