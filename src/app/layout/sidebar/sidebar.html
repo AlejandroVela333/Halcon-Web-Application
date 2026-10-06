@@ -1,0 +1,44 @@
+<aside class="sidebar" aria-label="Navegación principal">
+  <div class="brand">
+    <div class="brand__mark" aria-label="Identidad visual provisional">M</div>
+    <div class="brand__copy">
+      <strong>Colegio Manantial</strong>
+      <span>Sistema de Gestión Escolar</span>
+    </div>
+  </div>
+
+  <nav class="navigation" aria-label="Administración escolar">
+    <span class="navigation__label">Administración</span>
+    <button class="navigation__item" type="button" aria-disabled="true">
+      <app-ui-icon name="students" />
+      <span>Alumnos</span>
+    </button>
+    <button class="navigation__item" type="button" aria-disabled="true">
+      <app-ui-icon name="groups" />
+      <span>Grados y grupos</span>
+    </button>
+    <a
+      class="navigation__item"
+      routerLink="/profesores"
+      routerLinkActive="navigation__item--active"
+      ariaCurrentWhenActive="page"
+    >
+      <app-ui-icon name="teachers" />
+      <span>Profesores</span>
+    </a>
+  </nav>
+
+  <div class="sidebar__footer">
+    <div class="school-year">
+      <app-ui-icon name="calendar" [size]="18" />
+      <div>
+        <span>Ciclo escolar</span>
+        <strong>2026–2027 · Demo</strong>
+      </div>
+    </div>
+    <button class="logout" type="button" aria-disabled="true">
+      <app-ui-icon name="logout" [size]="18" />
+      <span>Cerrar sesión</span>
+    </button>
+  </div>
+</aside>

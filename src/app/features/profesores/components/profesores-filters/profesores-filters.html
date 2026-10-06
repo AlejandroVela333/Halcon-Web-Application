@@ -1,0 +1,48 @@
+<section class="filters" aria-labelledby="filters-title">
+  <div class="filters__heading">
+    <div>
+      <span class="filters__eyebrow">Herramientas de consulta</span>
+      <h2 id="filters-title">Buscar y filtrar</h2>
+    </div>
+    <span class="filters__pending">Controles preparados · Demo</span>
+  </div>
+
+  <div class="filters__grid">
+    <label class="field field--search">
+      <span>Buscar profesor</span>
+      <span class="field__control">
+        <app-ui-icon name="search" [size]="19" />
+        <input type="search" placeholder="Nombre o cédula de demostración" autocomplete="off" />
+      </span>
+    </label>
+
+    <label class="field">
+      <span>Grado</span>
+      <select>
+        <option value="">Todos los grados</option>
+        <option value="1">1.º</option>
+        <option value="2">2.º</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>Grupo</span>
+      <select>
+        <option value="">Todos los grupos</option>
+        <option value="a">Grupo A</option>
+        <option value="b">Grupo B</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>Materia</span>
+      <select>
+        <option value="">Todas las materias</option>
+        <option value="matematicas">Matemáticas</option>
+        <option value="lengua">Lengua</option>
+      </select>
+    </label>
+
+    <button class="clear-button" type="button">Limpiar</button>
+  </div>
+</section>

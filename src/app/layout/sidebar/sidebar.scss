@@ -1,0 +1,173 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 252px;
+  height: 100dvh;
+  padding: 26px 18px 20px;
+  background: #fbfcfc;
+  border-right: 1px solid var(--color-border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 7px 28px;
+}
+
+.brand__mark {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  background: linear-gradient(145deg, #147969, #064b43);
+  border-radius: 12px 12px 12px 4px;
+  box-shadow: 0 8px 20px rgba(13, 107, 94, 0.2);
+}
+
+.brand__copy {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.brand__copy strong {
+  font-family: Georgia, serif;
+  font-size: 0.98rem;
+  white-space: nowrap;
+}
+
+.brand__copy span,
+.navigation__label,
+.school-year span {
+  color: var(--color-muted);
+  font-size: 0.69rem;
+}
+
+.navigation {
+  display: grid;
+  gap: 7px;
+}
+
+.navigation__label {
+  padding: 0 12px 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.navigation__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 46px;
+  gap: 12px;
+  padding: 0 13px;
+  color: #53625e;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  border-radius: 11px;
+  cursor: default;
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.navigation__item--active {
+  color: var(--color-primary-strong);
+  background: var(--color-primary-soft);
+  box-shadow: inset 3px 0 var(--color-primary);
+}
+
+.sidebar__footer {
+  display: grid;
+  gap: 15px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.school-year {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  color: var(--color-primary);
+  background: #f1f7f5;
+  border: 1px solid #dbece7;
+  border-radius: 12px;
+}
+
+.school-year div {
+  display: grid;
+  gap: 2px;
+}
+
+.school-year strong {
+  color: #32423e;
+  font-size: 0.78rem;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 13px;
+  color: #71807c;
+  font-weight: 600;
+  background: transparent;
+  border: 0;
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 16px 20px 13px;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .brand {
+    padding: 0 0 14px;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .navigation__label,
+  .sidebar__footer {
+    display: none;
+  }
+
+  .navigation__item {
+    width: auto;
+    min-width: max-content;
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand__copy span {
+    display: none;
+  }
+}
