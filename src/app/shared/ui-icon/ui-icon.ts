@@ -6,13 +6,16 @@ export type IconName =
   | 'calendar'
   | 'chart'
   | 'check'
+  | 'edit'
+  | 'eye'
   | 'groups'
   | 'logout'
   | 'plus'
   | 'school'
   | 'search'
   | 'students'
-  | 'teachers';
+  | 'teachers'
+  | 'user-x';
 
 @Component({
   selector: 'app-ui-icon',

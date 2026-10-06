@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UiIcon } from '../../../../shared/ui-icon/ui-icon';
 
 interface PreviewTeacher {
   readonly name: string;
@@ -10,6 +11,7 @@ interface PreviewTeacher {
 
 @Component({
   selector: 'app-profesores-table',
+  imports: [UiIcon],
   templateUrl: './profesores-table.html',
   styleUrl: './profesores-table.scss',
 })
