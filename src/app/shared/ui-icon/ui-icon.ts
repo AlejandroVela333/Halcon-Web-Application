@@ -16,8 +16,8 @@ export type IconName =
   | 'search'
   | 'students'
   | 'teachers'
-  | 'user-plus'
-  | 'user-x';
+  | 'trash'
+  | 'user-plus';
 
 @Component({
   selector: 'app-ui-icon',

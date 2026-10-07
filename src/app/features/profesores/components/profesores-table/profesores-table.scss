@@ -39,13 +39,34 @@
 
 table {
   width: 100%;
-  min-width: 900px;
+  min-width: 860px;
   border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.column--teacher {
+  width: 29%;
+}
+
+.column--subjects {
+  width: 27%;
+}
+
+.column--groups {
+  width: 21%;
+}
+
+.column--status {
+  width: 10%;
+}
+
+.column--actions {
+  width: 13%;
 }
 
 th,
 td {
-  padding: 14px 16px;
+  padding: 12px 14px;
   text-align: left;
   vertical-align: middle;
   border-bottom: 1px solid #eef0f2;
@@ -53,9 +74,10 @@ td {
 
 th {
   color: #46535a;
-  font-size: 0.69rem;
-  font-weight: 750;
-  letter-spacing: 0.015em;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.005em;
   background: #fbfaff;
   text-transform: uppercase;
 }
@@ -71,14 +93,14 @@ tbody tr:hover {
 .teacher {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .teacher__avatar {
   display: grid;
-  flex: 0 0 42px;
-  width: 42px;
-  height: 42px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
   place-items: center;
   color: var(--color-primary-strong);
   font-size: 0.9rem;
@@ -94,14 +116,14 @@ tbody tr:hover {
 
 .teacher strong {
   color: #223039;
-  font-size: 0.84rem;
+  font-size: 0.85rem;
   font-weight: 600;
   white-space: nowrap;
 }
 
 .teacher div span {
   color: #647178;
-  font-size: 0.72rem;
+  font-size: 0.73rem;
 }
 
 .tag-list {
@@ -113,7 +135,7 @@ tbody tr:hover {
 .tag {
   padding: 0;
   color: #56646b;
-  font-size: 0.77rem;
+  font-size: 0.78rem;
   font-weight: 400;
   background: transparent;
   border: 0;
@@ -127,9 +149,9 @@ tbody tr:hover {
 .status {
   display: inline-flex;
   align-items: center;
-  padding: 6px 11px;
+  padding: 5px 10px;
   color: var(--color-primary-strong);
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   font-weight: 600;
   background: var(--color-status-active);
   border-radius: 999px;
@@ -151,13 +173,13 @@ tbody tr:hover {
 .actions {
   display: flex;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 6px;
 }
 
 .actions button {
   display: grid;
-  width: 27px;
-  height: 27px;
+  width: 24px;
+  height: 24px;
   padding: 0;
   place-items: center;
   background: transparent;
