@@ -1,7 +1,7 @@
 <section class="registry" aria-labelledby="registry-title">
   <div class="registry__header">
-    <h2 id="registry-title">Padrón Docente Registrado</h2>
-    <span class="registry__count">3 registros demo</span>
+    <h2 id="registry-title">Padrón de profesores</h2>
+    <span class="registry__count">3 profesores</span>
   </div>
 
   <div class="table-scroll">
@@ -11,7 +11,7 @@
       </caption>
       <thead>
         <tr>
-          <th scope="col">Nombre del Profesor / Cédula</th>
+          <th scope="col">Profesor / Cédula</th>
           <th scope="col">Materias Asignadas</th>
           <th scope="col">Grupos Asignados</th>
           <th scope="col">Estado</th>
@@ -19,11 +19,11 @@
         </tr>
       </thead>
       <tbody>
-        @for (teacher of previewTeachers; track teacher.document; let first = $first) {
-          <tr [class.registry__row--selected]="first">
+        @for (teacher of previewTeachers; track teacher.document) {
+          <tr>
             <td>
               <div class="teacher">
-                <span class="teacher__avatar" aria-hidden="true">{{ teacher.name.slice(-2) }}</span>
+                <span class="teacher__avatar" aria-hidden="true">{{ teacher.name.charAt(0) }}</span>
                 <div>
                   <strong>{{ teacher.name }}</strong>
                   <span>{{ teacher.document }}</span>
@@ -51,10 +51,20 @@
             </td>
             <td>
               <div class="actions" aria-label="Acciones preparadas">
-                <button type="button" aria-label="Consultar profesor demo" title="Consultar">
+                <button
+                  class="actions__view"
+                  type="button"
+                  aria-label="Consultar profesor demo"
+                  title="Consultar"
+                >
                   <app-ui-icon name="eye" [size]="17" />
                 </button>
-                <button type="button" aria-label="Editar profesor demo" title="Editar">
+                <button
+                  class="actions__edit"
+                  type="button"
+                  aria-label="Editar profesor demo"
+                  title="Editar"
+                >
                   <app-ui-icon name="edit" [size]="17" />
                 </button>
                 <button
@@ -80,8 +90,6 @@
       <button class="pagination__active" type="button" aria-current="page" title="Página 1">
         1
       </button>
-      <button type="button" aria-label="Página 2 demostrativa" title="Página 2">2</button>
-      <button type="button" aria-label="Página 3 demostrativa" title="Página 3">3</button>
       <button type="button" aria-label="Página siguiente" title="Siguiente">›</button>
     </div>
   </footer>

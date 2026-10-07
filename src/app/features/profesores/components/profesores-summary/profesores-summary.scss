@@ -1,48 +1,21 @@
 .summary {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin: 23px 0;
+  gap: 16px;
+  margin: 24px 0;
 }
 
 .summary-card {
-  position: relative;
   display: flex;
   min-height: 120px;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 20px;
-  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 16px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
-}
-
-.summary-card::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 64px;
-  height: 4px;
-  content: '';
-  background: currentColor;
-  border-radius: 0 0 0 8px;
-  opacity: 0.8;
-}
-
-.summary-card__icon {
-  display: grid;
-  flex: 0 0 46px;
-  width: 46px;
-  height: 46px;
-  place-items: center;
-  background: currentColor;
-  border-radius: 13px;
-}
-
-.summary-card__icon app-ui-icon {
-  color: #fff;
 }
 
 .summary-card__copy {
@@ -51,33 +24,48 @@
 }
 
 .summary-card__copy > span {
-  color: var(--color-muted);
-  font-size: 0.78rem;
-  font-weight: 650;
+  color: #58656c;
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 
 .summary-card__copy strong {
   color: var(--color-ink);
-  font-family: Georgia, serif;
-  font-size: 1.9rem;
+  font-family: var(--font-ui);
+  font-size: 1.55rem;
+  font-weight: 700;
   line-height: 1.05;
 }
 
 .summary-card__copy small {
-  color: #8a9894;
-  font-size: 0.68rem;
+  color: #5f6b71;
+  font-size: 0.79rem;
+}
+
+.summary-card__icon {
+  display: grid;
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  color: var(--card-accent);
+  background: var(--card-icon-background);
+  border-radius: 8px;
 }
 
 .summary-card--teal {
-  color: #0d7666;
+  --card-accent: #087e73;
+  --card-icon-background: #eff9f7;
 }
 
 .summary-card--blue {
-  color: #456f91;
+  --card-accent: #42647b;
+  --card-icon-background: #f0f2fb;
 }
 
 .summary-card--amber {
-  color: #b47b34;
+  --card-accent: #a96f2c;
+  --card-icon-background: #fbf4e9;
 }
 
 @media (max-width: 1080px) {
@@ -86,7 +74,7 @@
   }
 
   .summary-card {
-    padding: 18px;
+    padding: 16px;
   }
 }
 
@@ -96,6 +84,6 @@
   }
 
   .summary-card {
-    min-height: 112px;
+    min-height: 108px;
   }
 }

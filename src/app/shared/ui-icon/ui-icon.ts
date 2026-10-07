@@ -11,10 +11,12 @@ export type IconName =
   | 'groups'
   | 'logout'
   | 'plus'
+  | 'refresh'
   | 'school'
   | 'search'
   | 'students'
   | 'teachers'
+  | 'user-plus'
   | 'user-x';
 
 @Component({

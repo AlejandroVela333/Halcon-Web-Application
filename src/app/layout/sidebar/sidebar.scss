@@ -8,127 +8,129 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  width: 252px;
+  width: 300px;
   height: 100dvh;
-  padding: 26px 18px 20px;
-  background: #fbfcfc;
-  border-right: 1px solid var(--color-border);
+  padding: 18px 16px 20px;
+  background: var(--color-sidebar);
+  border-right: 1px solid #edf0f8;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 0 7px 28px;
+  gap: 10px;
+  padding: 0 4px 25px;
 }
 
 .brand__mark {
   display: grid;
-  flex: 0 0 42px;
-  width: 42px;
-  height: 42px;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
   place-items: center;
   color: #fff;
-  font-family: Georgia, serif;
-  font-size: 1.45rem;
-  font-weight: 700;
-  background: linear-gradient(145deg, #147969, #064b43);
-  border-radius: 12px 12px 12px 4px;
-  box-shadow: 0 8px 20px rgba(13, 107, 94, 0.2);
+  background: var(--color-primary);
+  border-radius: 8px;
 }
 
 .brand__copy {
   display: grid;
-  gap: 3px;
   min-width: 0;
 }
 
 .brand__copy strong {
-  font-family: Georgia, serif;
-  font-size: 0.98rem;
+  color: var(--color-primary-strong);
+  font-family: var(--font-display);
+  font-size: 1.34rem;
+  line-height: 1.05;
   white-space: nowrap;
 }
 
-.brand__copy span,
-.navigation__label,
-.school-year span {
-  color: var(--color-muted);
-  font-size: 0.69rem;
+.brand__copy span {
+  margin-top: 2px;
+  color: #536069;
+  font-size: 0.7rem;
+  line-height: 1.15;
 }
 
 .navigation {
   display: grid;
-  gap: 7px;
-}
-
-.navigation__label {
-  padding: 0 12px 8px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  gap: 3px;
 }
 
 .navigation__item {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 46px;
-  gap: 12px;
-  padding: 0 13px;
-  color: #53625e;
-  font-weight: 600;
+  min-height: 43px;
+  gap: 11px;
+  padding: 0 17px;
+  color: #3f4d55;
+  font-size: 0.94rem;
+  font-weight: 500;
   text-align: left;
   text-decoration: none;
   background: transparent;
   border: 0;
-  border-radius: 11px;
+  border-radius: 8px;
   cursor: default;
   transition:
-    color 160ms ease,
-    background 160ms ease;
+    color 150ms ease,
+    background 150ms ease;
+}
+
+.navigation__item app-ui-icon {
+  color: var(--color-primary);
 }
 
 .navigation__item--active {
-  color: var(--color-primary-strong);
-  background: var(--color-primary-soft);
-  box-shadow: inset 3px 0 var(--color-primary);
+  color: #fff;
+  background: #078f83;
+}
+
+.navigation__item--active app-ui-icon {
+  color: #fff;
 }
 
 .sidebar__footer {
   display: grid;
-  gap: 15px;
+  gap: 11px;
   margin-top: auto;
-  padding-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e8f2;
 }
 
 .school-year {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
-  padding: 13px;
-  color: var(--color-primary);
-  background: #f1f7f5;
-  border: 1px solid #dbece7;
-  border-radius: 12px;
+  padding: 0 4px;
 }
 
-.school-year div {
-  display: grid;
-  gap: 2px;
+.school-year span {
+  color: #5d6870;
+  font-size: 0.68rem;
 }
 
 .school-year strong {
-  color: #32423e;
-  font-size: 0.78rem;
+  padding: 4px 8px;
+  color: #5c7185;
+  font-size: 0.68rem;
+  font-weight: 650;
+  background: #edf0fa;
+  border-radius: 5px;
+  white-space: nowrap;
 }
 
 .logout {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 13px;
-  color: #71807c;
-  font-weight: 600;
+  padding: 9px 14px;
+  color: var(--color-danger);
+  font-size: 0.88rem;
+  font-weight: 650;
   background: transparent;
   border: 0;
   cursor: default;
@@ -139,22 +141,21 @@
     position: relative;
     width: 100%;
     height: auto;
-    padding: 16px 20px 13px;
+    padding: 14px 20px 12px;
     border-right: 0;
     border-bottom: 1px solid var(--color-border);
   }
 
   .brand {
-    padding: 0 0 14px;
+    padding: 0 0 13px;
   }
 
   .navigation {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     overflow-x: auto;
   }
 
-  .navigation__label,
   .sidebar__footer {
     display: none;
   }
@@ -162,12 +163,16 @@
   .navigation__item {
     width: auto;
     min-width: max-content;
-    min-height: 40px;
+    min-height: 39px;
   }
 }
 
 @media (max-width: 520px) {
   .brand__copy span {
     display: none;
+  }
+
+  .navigation__item {
+    padding-inline: 12px;
   }
 }

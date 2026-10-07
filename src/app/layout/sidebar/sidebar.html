@@ -1,6 +1,8 @@
 <aside class="sidebar" aria-label="Navegación principal">
   <div class="brand">
-    <div class="brand__mark" aria-label="Identidad visual provisional">M</div>
+    <div class="brand__mark" aria-label="Identidad visual provisional">
+      <app-ui-icon name="school" [size]="25" />
+    </div>
     <div class="brand__copy">
       <strong>Colegio Manantial</strong>
       <span>Sistema de Gestión Escolar</span>
@@ -8,7 +10,6 @@
   </div>
 
   <nav class="navigation" aria-label="Administración escolar">
-    <span class="navigation__label">Administración</span>
     <button class="navigation__item" type="button" aria-disabled="true">
       <app-ui-icon name="students" />
       <span>Alumnos</span>
@@ -26,15 +27,16 @@
       <app-ui-icon name="teachers" />
       <span>Profesores</span>
     </a>
+    <button class="navigation__item" type="button" aria-disabled="true">
+      <app-ui-icon name="book" />
+      <span>Materias</span>
+    </button>
   </nav>
 
   <div class="sidebar__footer">
     <div class="school-year">
-      <app-ui-icon name="calendar" [size]="18" />
-      <div>
-        <span>Ciclo escolar</span>
-        <strong>2026–2027 · Demo</strong>
-      </div>
+      <span>Ciclo Escolar</span>
+      <strong>2026–2027 · Demo</strong>
     </div>
     <button class="logout" type="button" aria-disabled="true">
       <app-ui-icon name="logout" [size]="18" />

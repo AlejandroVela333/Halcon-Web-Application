@@ -16,7 +16,7 @@ describe('ProfesoresPage', () => {
 
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Profesores');
-    expect(compiled.textContent).toContain('Padrón Docente Registrado');
+    expect(compiled.textContent).toContain('Padrón de profesores');
     expect(compiled.textContent).toContain('Registrar profesor');
   });
 });

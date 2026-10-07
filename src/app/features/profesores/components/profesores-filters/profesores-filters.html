@@ -3,40 +3,42 @@
 
   <div class="filters__grid">
     <label class="field field--search">
-      <span>Buscar profesor</span>
+      <span class="visually-hidden">Buscar profesor</span>
       <span class="field__control">
         <app-ui-icon name="search" [size]="19" />
-        <input type="search" placeholder="Nombre o cédula de demostración" autocomplete="off" />
+        <input type="search" placeholder="Buscar por nombre o cédula..." autocomplete="off" />
       </span>
     </label>
 
     <label class="field">
-      <span>Grado</span>
+      <span class="visually-hidden">Grado</span>
       <select>
-        <option value="">Todos los grados</option>
+        <option value="">Grado: Todos</option>
         <option value="1">1.º</option>
         <option value="2">2.º</option>
       </select>
     </label>
 
     <label class="field">
-      <span>Grupo</span>
+      <span class="visually-hidden">Grupo</span>
       <select>
-        <option value="">Todos los grupos</option>
+        <option value="">Grupo: Todos</option>
         <option value="a">Grupo A</option>
         <option value="b">Grupo B</option>
       </select>
     </label>
 
     <label class="field">
-      <span>Materia</span>
+      <span class="visually-hidden">Materia</span>
       <select>
-        <option value="">Todas las materias</option>
+        <option value="">Materia: Todas</option>
         <option value="matematicas">Matemáticas</option>
         <option value="lengua">Lengua</option>
       </select>
     </label>
 
-    <button class="clear-button" type="button">Limpiar</button>
+    <button class="clear-button" type="button" aria-label="Limpiar filtros" title="Limpiar">
+      <app-ui-icon name="refresh" [size]="21" />
+    </button>
   </div>
 </section>

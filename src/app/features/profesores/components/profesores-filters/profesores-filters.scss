@@ -1,5 +1,5 @@
 .filters {
-  padding: 18px 20px;
+  padding: 18px 16px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
@@ -8,21 +8,14 @@
 
 .filters__grid {
   display: grid;
-  grid-template-columns: minmax(230px, 1.7fr) repeat(3, minmax(130px, 0.75fr)) auto;
-  align-items: end;
-  gap: 13px;
+  grid-template-columns: minmax(260px, 1.7fr) repeat(3, minmax(145px, 0.68fr)) 48px;
+  align-items: center;
+  gap: 10px;
 }
 
 .field {
-  display: grid;
-  gap: 7px;
+  display: block;
   min-width: 0;
-}
-
-.field > span:first-child {
-  color: #4c5d58;
-  font-size: 0.72rem;
-  font-weight: 700;
 }
 
 .field__control {
@@ -33,20 +26,21 @@
 
 .field__control app-ui-icon {
   position: absolute;
-  left: 13px;
-  color: #82908c;
+  left: 14px;
+  color: #758289;
   pointer-events: none;
 }
 
 input,
 select {
   width: 100%;
-  height: 43px;
-  padding: 0 13px;
-  color: #34443f;
-  background: #fbfcfc;
-  border: 1px solid #d8e2df;
-  border-radius: 10px;
+  height: 42px;
+  padding: 0 14px;
+  color: #35444d;
+  font-size: 0.85rem;
+  background: var(--color-control);
+  border: 1px solid transparent;
+  border-radius: 8px;
 }
 
 input {
@@ -54,30 +48,33 @@ input {
 }
 
 input::placeholder {
-  color: #99a5a1;
+  color: #929ca2;
 }
 
 input:hover,
 select:hover {
-  border-color: #b9cac5;
+  border-color: #e3e5ec;
 }
 
 .clear-button {
-  height: 43px;
-  padding: 0 17px;
-  color: var(--color-primary);
-  font-weight: 750;
-  background: var(--color-primary-soft);
-  border: 1px solid transparent;
-  border-radius: 10px;
+  display: grid;
+  width: 48px;
+  height: 42px;
+  padding: 0;
+  place-items: center;
+  color: #66747b;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 .clear-button:hover {
-  background: #d7ebe5;
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1120px) {
   .filters__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -101,6 +98,6 @@ select:hover {
   }
 
   .clear-button {
-    width: 100%;
+    width: 42px;
   }
 }
