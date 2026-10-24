@@ -1,0 +1,8 @@
+<div class="form-group"><label for="name">Name</label><input id="name" name="name" value="{{ old('name', $user->name ?? '') }}" class="form-control" required></div>
+<div class="form-group"><label for="email">Email</label><input id="email" type="email" name="email" value="{{ old('email', $user->email ?? '') }}" class="form-control" required></div>
+<div class="form-group"><label for="role_id">Role</label><select id="role_id" name="role_id" class="form-control" required>@foreach($roles as $role)<option value="{{ $role->id }}" {{ (string)old('role_id', $user->role_id ?? '') === (string)$role->id ? 'selected' : '' }}>{{ $role->name }}</option>@endforeach</select></div>
+<div class="form-group"><label for="is_active">Status</label><select id="is_active" name="is_active" class="form-control" required><option value="1" {{ (string)old('is_active', isset($user) ? (int)$user->is_active : 1) === '1' ? 'selected' : '' }}>Active</option><option value="0" {{ (string)old('is_active', isset($user) ? (int)$user->is_active : 1) === '0' ? 'selected' : '' }}>Inactive</option></select></div>
+<div class="form-group"><label for="password">Password {{ isset($user) ? '(leave blank to keep current password)' : '' }}</label><input id="password" type="password" name="password" class="form-control" {{ isset($user) ? '' : 'required' }}></div>
+<div class="form-group"><label for="password_confirmation">Confirm password</label><input id="password_confirmation" type="password" name="password_confirmation" class="form-control" {{ isset($user) ? '' : 'required' }}></div>
+<button type="submit" class="btn btn-primary">Save user</button>
+<a href="{{ route('users.index') }}" class="btn btn-outline-secondary">Cancel</a>
